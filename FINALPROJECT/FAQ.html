@@ -1,0 +1,239 @@
+<html>
+<head>
+    <title>School FAQ</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:  Century Gothic;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            list-style: none;
+            padding: 10px 0;
+            border-radius: 8px;
+            z-index: 10;
+        }
+
+        nav ul li ul li {
+            margin: 0;
+        }
+
+        nav ul li ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            white-space: nowrap;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        nav ul li ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        header {
+           position: relative;
+            background-image: url('COVER.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header .content {
+            position: relative;
+            z-index: 1;
+        }
+
+         header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); 
+        }
+
+
+        header h1 {
+            font-size: 4.5em;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        main {
+             max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: grid;
+            gap: 20px;
+        }
+
+        .faq-section {
+            margin-bottom: 20px;
+            border: 1px solid #007bff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background-color: #FFFFFF;
+            color: darkgreen;
+            padding: 15px 20px;
+            font-size: 1.3em;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            color: #333;
+            padding: 0 20px;
+            background-color: white;
+            font-size: 1.1em;
+            line-height: 1.5;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-section:hover .faq-answer {
+            max-height: 200px; 
+            padding: 15px 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            color: #bbb;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+     <nav>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li>
+                <a href="AboutUs.html">About Us</a>
+                <ul>
+                    <li><a href="Academic.html">Academics</a></li>
+                    <li><a href="Departments.html">Departments</a></li>
+                    <li><a href="StudentLife.html">Student Life</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="Library.html">Library</a></li>
+                    <li><a href="Athletics.html">Athletics</a></li>
+                    <li><a href="SchoolPolicy.html">Policy</a></li>
+                    <li><a href="PrivacyPolicy.html">Privacy</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="Support.html">Support</a></li>
+                </ul>
+            </li>
+            <li><a href="Admission.html">Admission</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="content">
+        <h1>FAQs</h1>
+    </div>
+    </header>
+
+    <main>
+        <div class="faq-section">
+            <div class="faq-question">What are the admission requirements?</div>
+            <div class="faq-answer">The admission requirements include completing the application form, submitting relevant documents, and attending an interview (if applicable).</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question">How do I apply for financial aid?</div>
+            <div class="faq-answer">To apply for financial aid, complete the financial assistance form available on our website and submit it along with your application.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question">What extracurricular activities are available?</div>
+            <div class="faq-answer">Our school offers a variety of extracurricular activities, including sports, music, arts, and academic clubs to enhance students' overall development.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question">When is the application deadline?</div>
+            <div class="faq-answer">The application deadline is typically in mid-March for the upcoming academic year.</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Our School. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

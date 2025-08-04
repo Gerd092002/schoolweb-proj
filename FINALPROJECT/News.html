@@ -1,0 +1,305 @@
+<html>
+<head>
+    <title>School News</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:  Century Gothic;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            list-style: none;
+            padding: 10px 0;
+            border-radius: 8px;
+            z-index: 10;
+        }
+
+        nav ul li ul li {
+            margin: 0;
+        }
+
+        nav ul li ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            white-space: nowrap;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        nav ul li ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        header {
+            background-image: url('COVER.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        header .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 4.5em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        header p {
+            font-size: 1.6em;
+            margin-top: 15px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+
+
+        main {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: yellowgreen;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .news-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .news-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-card:hover {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-card h3 {
+            text-align: center;
+            color: yellowgreen;
+            font-size: 1.8em;
+            margin: 15px;
+        }
+
+        .news-card p {
+            padding: 0 15px 15px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .read-more {
+            display: block;
+            text-align: center;
+            font-weight: 500;
+            color: #007bff;
+            margin: 10px 0 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #0056b3;
+        }
+
+        .news-detail {
+            padding: 30px;
+            margin-top: 50px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-detail h2 {
+            color: yellowgreen;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .news-detail p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            color: #bbb;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li>
+                <a href="AboutUs.html">About Us</a>
+                <ul>
+                    <li><a href="Academic.html">Academics</a></li>
+                    <li><a href="Departments.html">Departments</a></li>
+                    <li><a href="StudentLife.html">Student Life</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="Library.html">Library</a></li>
+                    <li><a href="Athletics.html">Athletics</a></li>
+                    <li><a href="SchoolPolicy.html">Policy</a></li>
+                    <li><a href="PrivacyPolicy.html">Privacy</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="Support.html">Support</a></li>
+                </ul>
+            </li>
+            <li><a href="Admission.html">Admission</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="content">
+            <h1>School News</h1>
+            <p>Stay Updated with Our Latest News</p>
+        </div>
+    </header>
+    <main>
+        <h2 class="section-title">News</h2>
+        <div class="news-card-container">
+            <div class="news-card">
+                <img src="NATIONALRM.jpg" alt="National Reading Month">
+                <h3>National Reading Month</h3>
+                <p>We celebrated National Reading Month with engaging activities that inspired a love for books and literacy!</p>
+                <a href="#news1" class="read-more">Read More</a>
+            </div>
+            <div class="news-card">
+                <img src="ISSAA.jpg" alt="Sports Day Highlights">
+                <h3>Sports Day Highlights</h3>
+                <p>Catch up on the exciting highlights and achievements from this year’s sports day event.</p>
+                <a href="#news2" class="read-more">Read More</a>
+            </div>
+            <div class="news-card">
+                <img src="SINULOG.jpg" alt="Sinulog Festival">
+                <h3>Sinulog Festival</h3>
+                <p>Join us in reliving the vibrant celebrations of culture and tradition at this year's Sinulog Festival.</p>
+                <a href="#news3" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div id="news1" class="news-detail">
+            <h2>National Reading Month</h2>
+            <p>Our school celebrated National Reading Month with a series of exciting activities. Students participated in read-a-thons, storytelling sessions, and book-themed art competitions. The event fostered a deeper appreciation for reading and highlighted its importance in education and personal growth.</p>
+        </div>
+
+        <div id="news2" class="news-detail">
+            <h2>Sports Day Highlights</h2>
+            <p>This year’s sports day was full of excitement and energy! From track events to team games, every moment showcased the spirit of teamwork and determination.</p>
+        </div>
+
+        <div id="news3" class="news-detail">
+            <h2>Sinulog Festival</h2>
+            <p>Our school embraced the colorful traditions of the Sinulog Festival with a parade of cultural dances, vibrant costumes, and heartfelt celebrations. The event brought together students, staff, and families, fostering a deeper connection to our rich heritage and community spirit.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Our School. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
