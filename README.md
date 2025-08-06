@@ -1,14 +1,14 @@
-🎓 School Web Project
+ School Web Project
 
 This is a simple web project built using HTML and CSS for a school assignment. The goal was to create a static website to demonstrate fundamental web development skills, including layout, design, and responsive styling.
 
-🌐 Project Overview
+ Project Overview
 
 - Static web pages with clean and semantic HTML
 - Styled using modern CSS
 - Organized file structure for easy maintenance
 
-📁 Project Structure
+ Project Structure
 
 - Homepage.html #main page
 - Academic.html
@@ -20,7 +20,7 @@ This is a simple web project built using HTML and CSS for a school assignment. T
 - If you view the code of that certain pages, you can see also the CSS codes inside.
 
 
-🖥️ How to View
+ How to View
 
 Just open the `Homepage.html` file in your browser:
 
@@ -30,17 +30,16 @@ Just open the `Homepage.html` file in your browser:
 
 - You can see also the images that I used inside.
 
-🛠️ Tools Used
+ Tools Used
 
 - HTML
 - CSS
 - VS Code 
 
-📚 What I Learned
+ What I Learned
 
 - Writing semantic HTML
 - Structuring a website
 - Styling with CSS (layout, colors, fonts, etc.)
 
-Created by Claude Code
 
