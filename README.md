@@ -42,9 +42,5 @@ Just open the `Homepage.html` file in your browser:
 - Structuring a website
 - Styling with CSS (layout, colors, fonts, etc.)
 
-NOTED:
-
-This project is for educational purposes only and is not intended for commercial use.
-
 Created by Claude Code
 
